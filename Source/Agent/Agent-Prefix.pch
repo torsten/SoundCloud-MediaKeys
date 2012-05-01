@@ -1,0 +1,7 @@
+//
+// Prefix header for all source files of the 'SoundCloud-MediaKeys' target in the 'SoundCloud-MediaKeys' project
+//
+
+#ifdef __OBJC__
+    #import <Cocoa/Cocoa.h>
+#endif

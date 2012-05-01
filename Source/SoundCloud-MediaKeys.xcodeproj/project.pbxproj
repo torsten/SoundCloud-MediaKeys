@@ -1,0 +1,259 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		E52B5173154D6CE900B52BEC /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E52B5172154D6CE900B52BEC /* Cocoa.framework */; };
+		E52B51A2154D6D2C00B52BEC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E52B519A154D6D2C00B52BEC /* main.m */; };
+		E52B51A3154D6D2C00B52BEC /* SMAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E52B519C154D6D2C00B52BEC /* SMAppDelegate.m */; };
+		E52B51B1154D705200B52BEC /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = E52B51AF154D705200B52BEC /* Credits.rtf */; };
+		E52B51B2154D705200B52BEC /* Empty.xib in Resources */ = {isa = PBXBuildFile; fileRef = E52B51B0154D705200B52BEC /* Empty.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		E52B516E154D6CE900B52BEC /* SoundCloud-MediaKeys.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SoundCloud-MediaKeys.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E52B5172154D6CE900B52BEC /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		E52B5175154D6CE900B52BEC /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		E52B5176154D6CE900B52BEC /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		E52B5177154D6CE900B52BEC /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		E52B519A154D6D2C00B52BEC /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		E52B519B154D6D2C00B52BEC /* SMAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMAppDelegate.h; sourceTree = "<group>"; };
+		E52B519C154D6D2C00B52BEC /* SMAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMAppDelegate.m; sourceTree = "<group>"; };
+		E52B519D154D6D2C00B52BEC /* Agent-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Agent-Info.plist"; sourceTree = "<group>"; };
+		E52B519E154D6D2C00B52BEC /* Agent-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Agent-Prefix.pch"; sourceTree = "<group>"; };
+		E52B51AF154D705200B52BEC /* Credits.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = Credits.rtf; sourceTree = "<group>"; };
+		E52B51B0154D705200B52BEC /* Empty.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Empty.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E52B516B154D6CE900B52BEC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E52B5173154D6CE900B52BEC /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		E52B5163154D6CE900B52BEC = {
+			isa = PBXGroup;
+			children = (
+				E52B5193154D6D2C00B52BEC /* Agent */,
+				E52B5171154D6CE900B52BEC /* Frameworks */,
+				E52B516F154D6CE900B52BEC /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		E52B516F154D6CE900B52BEC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E52B516E154D6CE900B52BEC /* SoundCloud-MediaKeys.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E52B5171154D6CE900B52BEC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E52B5172154D6CE900B52BEC /* Cocoa.framework */,
+				E52B5174154D6CE900B52BEC /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E52B5174154D6CE900B52BEC /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E52B5175154D6CE900B52BEC /* AppKit.framework */,
+				E52B5176154D6CE900B52BEC /* CoreData.framework */,
+				E52B5177154D6CE900B52BEC /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		E52B5193154D6D2C00B52BEC /* Agent */ = {
+			isa = PBXGroup;
+			children = (
+				E52B519A154D6D2C00B52BEC /* main.m */,
+				E52B519B154D6D2C00B52BEC /* SMAppDelegate.h */,
+				E52B519C154D6D2C00B52BEC /* SMAppDelegate.m */,
+				E52B519D154D6D2C00B52BEC /* Agent-Info.plist */,
+				E52B519E154D6D2C00B52BEC /* Agent-Prefix.pch */,
+				E52B51AF154D705200B52BEC /* Credits.rtf */,
+				E52B51B0154D705200B52BEC /* Empty.xib */,
+			);
+			path = Agent;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E52B516D154D6CE900B52BEC /* SoundCloud-MediaKeys */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E52B518C154D6CEA00B52BEC /* Build configuration list for PBXNativeTarget "SoundCloud-MediaKeys" */;
+			buildPhases = (
+				E52B516A154D6CE900B52BEC /* Sources */,
+				E52B516B154D6CE900B52BEC /* Frameworks */,
+				E52B516C154D6CE900B52BEC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "SoundCloud-MediaKeys";
+			productName = "SoundCloud-MediaKeys";
+			productReference = E52B516E154D6CE900B52BEC /* SoundCloud-MediaKeys.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E52B5165154D6CE900B52BEC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = SM;
+				LastUpgradeCheck = 0430;
+				ORGANIZATIONNAME = 6Wunderkinder;
+			};
+			buildConfigurationList = E52B5168154D6CE900B52BEC /* Build configuration list for PBXProject "SoundCloud-MediaKeys" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = E52B5163154D6CE900B52BEC;
+			productRefGroup = E52B516F154D6CE900B52BEC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E52B516D154D6CE900B52BEC /* SoundCloud-MediaKeys */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E52B516C154D6CE900B52BEC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E52B51B1154D705200B52BEC /* Credits.rtf in Resources */,
+				E52B51B2154D705200B52BEC /* Empty.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E52B516A154D6CE900B52BEC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E52B51A2154D6D2C00B52BEC /* main.m in Sources */,
+				E52B51A3154D6D2C00B52BEC /* SMAppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		E52B518A154D6CEA00B52BEC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		E52B518B154D6CEA00B52BEC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		E52B518D154D6CEA00B52BEC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Agent/Agent-Prefix.pch";
+				INFOPLIST_FILE = "Agent/Agent-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		E52B518E154D6CEA00B52BEC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Agent/Agent-Prefix.pch";
+				INFOPLIST_FILE = "Agent/Agent-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E52B5168154D6CE900B52BEC /* Build configuration list for PBXProject "SoundCloud-MediaKeys" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E52B518A154D6CEA00B52BEC /* Debug */,
+				E52B518B154D6CEA00B52BEC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E52B518C154D6CEA00B52BEC /* Build configuration list for PBXNativeTarget "SoundCloud-MediaKeys" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E52B518D154D6CEA00B52BEC /* Debug */,
+				E52B518E154D6CEA00B52BEC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = E52B5165154D6CE900B52BEC /* Project object */;
+}
