@@ -12,7 +12,20 @@
 		E52B51A3154D6D2C00B52BEC /* SMAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E52B519C154D6D2C00B52BEC /* SMAppDelegate.m */; };
 		E52B51B1154D705200B52BEC /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = E52B51AF154D705200B52BEC /* Credits.rtf */; };
 		E52B51B2154D705200B52BEC /* Empty.xib in Resources */ = {isa = PBXBuildFile; fileRef = E52B51B0154D705200B52BEC /* Empty.xib */; };
+		E5F8BAA9155080D10088276D /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E52B5172154D6CE900B52BEC /* Cocoa.framework */; };
+		E5F8BABC155082B40088276D /* MediaKeysResponder.bundle in Resources */ = {isa = PBXBuildFile; fileRef = E5F8BAA8155080D10088276D /* MediaKeysResponder.bundle */; };
+		E5F8BAC0155082E10088276D /* Bundle-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E5F8BABE155082E10088276D /* Bundle-Info.plist */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E5F8BAB9155082840088276D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E52B5165154D6CE900B52BEC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E5F8BAA7155080D10088276D;
+			remoteInfo = "SoundCloud-MediaKeys-Bundle";
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		E52B516E154D6CE900B52BEC /* SoundCloud-MediaKeys.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SoundCloud-MediaKeys.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -27,6 +40,9 @@
 		E52B519E154D6D2C00B52BEC /* Agent-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Agent-Prefix.pch"; sourceTree = "<group>"; };
 		E52B51AF154D705200B52BEC /* Credits.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = Credits.rtf; sourceTree = "<group>"; };
 		E52B51B0154D705200B52BEC /* Empty.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Empty.xib; sourceTree = "<group>"; };
+		E5F8BAA8155080D10088276D /* MediaKeysResponder.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MediaKeysResponder.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		E5F8BABE155082E10088276D /* Bundle-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Bundle-Info.plist"; sourceTree = "<group>"; };
+		E5F8BABF155082E10088276D /* Bundle-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Bundle-Prefix.pch"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,6 +54,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		E5F8BAA5155080D10088276D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E5F8BAA9155080D10088276D /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -45,6 +69,7 @@
 			isa = PBXGroup;
 			children = (
 				E52B5193154D6D2C00B52BEC /* Agent */,
+				E5F8BABD155082E10088276D /* Bundle */,
 				E52B5171154D6CE900B52BEC /* Frameworks */,
 				E52B516F154D6CE900B52BEC /* Products */,
 			);
@@ -54,6 +79,7 @@
 			isa = PBXGroup;
 			children = (
 				E52B516E154D6CE900B52BEC /* SoundCloud-MediaKeys.app */,
+				E5F8BAA8155080D10088276D /* MediaKeysResponder.bundle */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -91,6 +117,15 @@
 			path = Agent;
 			sourceTree = "<group>";
 		};
+		E5F8BABD155082E10088276D /* Bundle */ = {
+			isa = PBXGroup;
+			children = (
+				E5F8BABE155082E10088276D /* Bundle-Info.plist */,
+				E5F8BABF155082E10088276D /* Bundle-Prefix.pch */,
+			);
+			path = Bundle;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -105,11 +140,29 @@
 			buildRules = (
 			);
 			dependencies = (
+				E5F8BABA155082840088276D /* PBXTargetDependency */,
 			);
 			name = "SoundCloud-MediaKeys";
 			productName = "SoundCloud-MediaKeys";
 			productReference = E52B516E154D6CE900B52BEC /* SoundCloud-MediaKeys.app */;
 			productType = "com.apple.product-type.application";
+		};
+		E5F8BAA7155080D10088276D /* MediaKeysResponder */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E5F8BAB3155080D10088276D /* Build configuration list for PBXNativeTarget "MediaKeysResponder" */;
+			buildPhases = (
+				E5F8BAA4155080D10088276D /* Sources */,
+				E5F8BAA5155080D10088276D /* Frameworks */,
+				E5F8BAA6155080D10088276D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MediaKeysResponder;
+			productName = "SoundCloud-MediaKeys-Bundle";
+			productReference = E5F8BAA8155080D10088276D /* MediaKeysResponder.bundle */;
+			productType = "com.apple.product-type.bundle";
 		};
 /* End PBXNativeTarget section */
 
@@ -134,6 +187,7 @@
 			projectRoot = "";
 			targets = (
 				E52B516D154D6CE900B52BEC /* SoundCloud-MediaKeys */,
+				E5F8BAA7155080D10088276D /* MediaKeysResponder */,
 			);
 		};
 /* End PBXProject section */
@@ -145,6 +199,15 @@
 			files = (
 				E52B51B1154D705200B52BEC /* Credits.rtf in Resources */,
 				E52B51B2154D705200B52BEC /* Empty.xib in Resources */,
+				E5F8BABC155082B40088276D /* MediaKeysResponder.bundle in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E5F8BAA6155080D10088276D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E5F8BAC0155082E10088276D /* Bundle-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -160,7 +223,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		E5F8BAA4155080D10088276D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E5F8BABA155082840088276D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E5F8BAA7155080D10088276D /* MediaKeysResponder */;
+			targetProxy = E5F8BAB9155082840088276D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		E52B518A154D6CEA00B52BEC /* Debug */ = {
@@ -232,6 +310,30 @@
 			};
 			name = Release;
 		};
+		E5F8BAB1155080D10088276D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Bundle/Bundle-Prefix.pch";
+				INFOPLIST_FILE = "Bundle/Bundle-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Debug;
+		};
+		E5F8BAB2155080D10088276D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Bundle/Bundle-Prefix.pch";
+				INFOPLIST_FILE = "Bundle/Bundle-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -249,6 +351,15 @@
 			buildConfigurations = (
 				E52B518D154D6CEA00B52BEC /* Debug */,
 				E52B518E154D6CEA00B52BEC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E5F8BAB3155080D10088276D /* Build configuration list for PBXNativeTarget "MediaKeysResponder" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E5F8BAB1155080D10088276D /* Debug */,
+				E5F8BAB2155080D10088276D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
