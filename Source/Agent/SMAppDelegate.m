@@ -54,10 +54,9 @@
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
-    ProcessSerialNumber psn = { 0, kCurrentProcess };
-    TransformProcessType(&psn, kProcessTransformToForegroundApplication);
-
     // self.statusMenuItem.state = NSOnState;
+    // Running, no SoundCloud Process found.
+    // 
 }
 
 
@@ -76,8 +75,6 @@
 {
     ProcessSerialNumber psn = { 0, kCurrentProcess };
     TransformProcessType(&psn, kProcessTransformToBackgroundApplication);
-    
-    // ShowHideProcess (&psn, false);
 }
 
 

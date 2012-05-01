@@ -32,7 +32,5 @@
 	<string>NSApplication</string>
 	<key>SecTaskAccess</key>
 	<string>allowed</string>
-    <key>LSUIElement</key>
-    <true/>
 </dict>
 </plist>
