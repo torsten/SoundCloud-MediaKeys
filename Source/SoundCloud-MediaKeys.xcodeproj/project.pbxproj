@@ -7,17 +7,37 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E503596D15680E01007CEEAC /* JRSwizzle.m in Sources */ = {isa = PBXBuildFile; fileRef = E503596C15680E01007CEEAC /* JRSwizzle.m */; };
+		E503597715698B45007CEEAC /* NSApplication+SMMediaKeys.m in Sources */ = {isa = PBXBuildFile; fileRef = E503597315698B45007CEEAC /* NSApplication+SMMediaKeys.m */; };
+		E503597815698B45007CEEAC /* SMBundlePrincipal.m in Sources */ = {isa = PBXBuildFile; fileRef = E503597515698B45007CEEAC /* SMBundlePrincipal.m */; };
+		E503599E15699430007CEEAC /* SecurityFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E503599D15699430007CEEAC /* SecurityFoundation.framework */; };
+		E50359B515699BC6007CEEAC /* mach_inject_bundle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E503599715698E18007CEEAC /* mach_inject_bundle.framework */; };
 		E52B5173154D6CE900B52BEC /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E52B5172154D6CE900B52BEC /* Cocoa.framework */; };
 		E52B51A2154D6D2C00B52BEC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E52B519A154D6D2C00B52BEC /* main.m */; };
 		E52B51A3154D6D2C00B52BEC /* SMAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E52B519C154D6D2C00B52BEC /* SMAppDelegate.m */; };
 		E52B51B1154D705200B52BEC /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = E52B51AF154D705200B52BEC /* Credits.rtf */; };
 		E52B51B2154D705200B52BEC /* Empty.xib in Resources */ = {isa = PBXBuildFile; fileRef = E52B51B0154D705200B52BEC /* Empty.xib */; };
+		E57AA48F1569A1700088630B /* mach_inject_bundle.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = E503599715698E18007CEEAC /* mach_inject_bundle.framework */; };
 		E5F8BAA9155080D10088276D /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E52B5172154D6CE900B52BEC /* Cocoa.framework */; };
 		E5F8BABC155082B40088276D /* MediaKeysResponder.bundle in Resources */ = {isa = PBXBuildFile; fileRef = E5F8BAA8155080D10088276D /* MediaKeysResponder.bundle */; };
 		E5F8BAC0155082E10088276D /* Bundle-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E5F8BABE155082E10088276D /* Bundle-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		E503599615698E18007CEEAC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E503598B15698E18007CEEAC /* mach_inject_bundle.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8DC2EF5B0486A6940098B216;
+			remoteInfo = mach_inject_bundle;
+		};
+		E503599915698E3A007CEEAC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E503598B15698E18007CEEAC /* mach_inject_bundle.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 8DC2EF4F0486A6940098B216;
+			remoteInfo = mach_inject_bundle;
+		};
 		E5F8BAB9155082840088276D /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = E52B5165154D6CE900B52BEC /* Project object */;
@@ -27,7 +47,29 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		E57AA48E1569A16C0088630B /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				E57AA48F1569A1700088630B /* mach_inject_bundle.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		E503596B15680E01007CEEAC /* JRSwizzle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JRSwizzle.h; path = Libraries/jrswizzle/JRSwizzle.h; sourceTree = SOURCE_ROOT; };
+		E503596C15680E01007CEEAC /* JRSwizzle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JRSwizzle.m; path = Libraries/jrswizzle/JRSwizzle.m; sourceTree = SOURCE_ROOT; };
+		E503597215698B45007CEEAC /* NSApplication+SMMediaKeys.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSApplication+SMMediaKeys.h"; sourceTree = "<group>"; };
+		E503597315698B45007CEEAC /* NSApplication+SMMediaKeys.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSApplication+SMMediaKeys.m"; sourceTree = "<group>"; };
+		E503597415698B45007CEEAC /* SMBundlePrincipal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMBundlePrincipal.h; sourceTree = "<group>"; };
+		E503597515698B45007CEEAC /* SMBundlePrincipal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMBundlePrincipal.m; sourceTree = "<group>"; };
+		E503597615698B45007CEEAC /* SoundCloud.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SoundCloud.h; sourceTree = "<group>"; };
+		E503598B15698E18007CEEAC /* mach_inject_bundle.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = mach_inject_bundle.xcodeproj; path = Libraries/mach_star/mach_inject_bundle/mach_inject_bundle.xcodeproj; sourceTree = SOURCE_ROOT; };
+		E503599D15699430007CEEAC /* SecurityFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SecurityFoundation.framework; path = System/Library/Frameworks/SecurityFoundation.framework; sourceTree = SDKROOT; };
 		E52B516E154D6CE900B52BEC /* SoundCloud-MediaKeys.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SoundCloud-MediaKeys.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E52B5172154D6CE900B52BEC /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		E52B5175154D6CE900B52BEC /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -50,6 +92,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E50359B515699BC6007CEEAC /* mach_inject_bundle.framework in Frameworks */,
+				E503599E15699430007CEEAC /* SecurityFoundation.framework in Frameworks */,
 				E52B5173154D6CE900B52BEC /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -65,6 +109,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E503598C15698E18007CEEAC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E503599715698E18007CEEAC /* mach_inject_bundle.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		E52B5163154D6CE900B52BEC = {
 			isa = PBXGroup;
 			children = (
@@ -96,6 +148,7 @@
 		E52B5174154D6CE900B52BEC /* Other Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				E503599D15699430007CEEAC /* SecurityFoundation.framework */,
 				E52B5175154D6CE900B52BEC /* AppKit.framework */,
 				E52B5176154D6CE900B52BEC /* CoreData.framework */,
 				E52B5177154D6CE900B52BEC /* Foundation.framework */,
@@ -106,6 +159,7 @@
 		E52B5193154D6D2C00B52BEC /* Agent */ = {
 			isa = PBXGroup;
 			children = (
+				E503598B15698E18007CEEAC /* mach_inject_bundle.xcodeproj */,
 				E52B519A154D6D2C00B52BEC /* main.m */,
 				E52B519B154D6D2C00B52BEC /* SMAppDelegate.h */,
 				E52B519C154D6D2C00B52BEC /* SMAppDelegate.m */,
@@ -122,6 +176,13 @@
 			children = (
 				E5F8BABE155082E10088276D /* Bundle-Info.plist */,
 				E5F8BABF155082E10088276D /* Bundle-Prefix.pch */,
+				E503596B15680E01007CEEAC /* JRSwizzle.h */,
+				E503596C15680E01007CEEAC /* JRSwizzle.m */,
+				E503597215698B45007CEEAC /* NSApplication+SMMediaKeys.h */,
+				E503597315698B45007CEEAC /* NSApplication+SMMediaKeys.m */,
+				E503597415698B45007CEEAC /* SMBundlePrincipal.h */,
+				E503597515698B45007CEEAC /* SMBundlePrincipal.m */,
+				E503597615698B45007CEEAC /* SoundCloud.h */,
 			);
 			path = Bundle;
 			sourceTree = "<group>";
@@ -135,11 +196,13 @@
 			buildPhases = (
 				E52B516A154D6CE900B52BEC /* Sources */,
 				E52B516B154D6CE900B52BEC /* Frameworks */,
+				E57AA48E1569A16C0088630B /* CopyFiles */,
 				E52B516C154D6CE900B52BEC /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				E503599A15698E3A007CEEAC /* PBXTargetDependency */,
 				E5F8BABA155082840088276D /* PBXTargetDependency */,
 			);
 			name = "SoundCloud-MediaKeys";
@@ -184,6 +247,12 @@
 			mainGroup = E52B5163154D6CE900B52BEC;
 			productRefGroup = E52B516F154D6CE900B52BEC /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = E503598C15698E18007CEEAC /* Products */;
+					ProjectRef = E503598B15698E18007CEEAC /* mach_inject_bundle.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				E52B516D154D6CE900B52BEC /* SoundCloud-MediaKeys */,
@@ -191,6 +260,16 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		E503599715698E18007CEEAC /* mach_inject_bundle.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = mach_inject_bundle.framework;
+			remoteRef = E503599615698E18007CEEAC /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		E52B516C154D6CE900B52BEC /* Resources */ = {
@@ -227,12 +306,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E503596D15680E01007CEEAC /* JRSwizzle.m in Sources */,
+				E503597715698B45007CEEAC /* NSApplication+SMMediaKeys.m in Sources */,
+				E503597815698B45007CEEAC /* SMBundlePrincipal.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		E503599A15698E3A007CEEAC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = mach_inject_bundle;
+			targetProxy = E503599915698E3A007CEEAC /* PBXContainerItemProxy */;
+		};
 		E5F8BABA155082840088276D /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = E5F8BAA7155080D10088276D /* MediaKeysResponder */;
@@ -291,10 +378,14 @@
 		E52B518D154D6CEA00B52BEC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = "$(TARGET_BUILD_DIR)/../Default";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Agent/Agent-Prefix.pch";
 				INFOPLIST_FILE = "Agent/Agent-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/..";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -302,10 +393,14 @@
 		E52B518E154D6CEA00B52BEC /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = "$(TARGET_BUILD_DIR)/../Default";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Agent/Agent-Prefix.pch";
 				INFOPLIST_FILE = "Agent/Agent-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/..";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -313,6 +408,7 @@
 		E5F8BAB1155080D10088276D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Bundle/Bundle-Prefix.pch";
 				INFOPLIST_FILE = "Bundle/Bundle-Info.plist";
@@ -325,6 +421,7 @@
 		E5F8BAB2155080D10088276D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Bundle/Bundle-Prefix.pch";
 				INFOPLIST_FILE = "Bundle/Bundle-Info.plist";

@@ -7,6 +7,8 @@
 //
 
 #import "SMAppDelegate.h"
+#import <SecurityInterface/SFAuthorizationView.h>
+#import <mach_inject_bundle/mach_inject_bundle.h>
 
 
 @interface SMAppDelegate ()
@@ -57,6 +59,12 @@
     // self.statusMenuItem.state = NSOnState;
     // Running, no SoundCloud Process found.
     // 
+    
+    [[[NSWorkspace sharedWorkspace] notificationCenter]
+        addObserver:self
+           selector:@selector(handleWorkspaceDidLaunchApp:)
+               name:NSWorkspaceDidLaunchApplicationNotification
+             object:nil];
 }
 
 
@@ -75,6 +83,40 @@
 {
     ProcessSerialNumber psn = { 0, kCurrentProcess };
     TransformProcessType(&psn, kProcessTransformToBackgroundApplication);
+}
+
+
+- (void)handleWorkspaceDidLaunchApp:(NSNotification *)notification
+{
+    NSRunningApplication *app = (NSRunningApplication *)[notification.userInfo objectForKey:NSWorkspaceApplicationKey];
+    
+    // 
+    // NSApplicationProcessIdentifier
+    
+    // NSLog(@"Got notification %@ for app %@", notification, app.bundleIdentifier);
+    
+    if ([app.bundleIdentifier isEqualToString:@"com.soundcloud.desktop"])
+    {
+        pid_t pid = app.processIdentifier;
+        
+        SFAuthorization * auth = [[SFAuthorization alloc] init];
+        
+        NSError * error;
+        BOOL win = [auth obtainWithRight:"system.privilege.taskport"
+                                   flags:(kAuthorizationFlagExtendRights | kAuthorizationFlagInteractionAllowed | kAuthorizationFlagPreAuthorize) 
+                                   error:&error];
+        
+        NSLog(@"win %d b/c %@", win, error);
+        
+        NSString *codeBundle = [[NSBundle mainBundle] pathForResource:@"MediaKeysResponder" ofType:@"bundle"];
+        NSLog(@"codeBundle: %@", codeBundle);
+        
+        if (win)
+        {
+            mach_error_t err = mach_inject_bundle_pid([codeBundle UTF8String], pid);
+            NSLog(@"inject error: %d", err);
+        }
+    }
 }
 
 

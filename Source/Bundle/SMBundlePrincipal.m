@@ -7,7 +7,7 @@
 //
 
 #import "JRSwizzle.h"
-#import "SMPrincipal.h"
+#import "SMBundlePrincipal.h"
 
 
 @implementation SMPrincipal
