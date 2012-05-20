@@ -1,0 +1,6 @@
+[submodule "Source/Libraries/jrswizzle"]
+	path = Source/Libraries/jrswizzle
+	url = https://github.com/rentzsch/jrswizzle.git
+[submodule "Source/Libraries/mach_star"]
+	path = Source/Libraries/mach_star
+	url = https://github.com/rentzsch/mach_star.git
