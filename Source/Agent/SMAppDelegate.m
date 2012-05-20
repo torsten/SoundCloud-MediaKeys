@@ -32,8 +32,8 @@
 
 - (id)init
 {
-    self = [super init];
-    if (self) {
+    if ((self = [super init]))
+    {
         self.dockMenu = [[NSMenu alloc] init];
         self.statusMenuItem =
             [self.dockMenu addItemWithTitle:@"Status: Launching"
@@ -90,33 +90,69 @@
 {
     NSRunningApplication *app = (NSRunningApplication *)[notification.userInfo objectForKey:NSWorkspaceApplicationKey];
     
-    // 
-    // NSApplicationProcessIdentifier
-    
     // NSLog(@"Got notification %@ for app %@", notification, app.bundleIdentifier);
     
     if ([app.bundleIdentifier isEqualToString:@"com.soundcloud.desktop"])
     {
-        pid_t pid = app.processIdentifier;
-        
-        SFAuthorization * auth = [[SFAuthorization alloc] init];
-        
-        NSError * error;
-        BOOL win = [auth obtainWithRight:"system.privilege.taskport"
-                                   flags:(kAuthorizationFlagExtendRights | kAuthorizationFlagInteractionAllowed | kAuthorizationFlagPreAuthorize) 
-                                   error:&error];
-        
-        NSLog(@"win %d b/c %@", win, error);
-        
-        NSString *codeBundle = [[NSBundle mainBundle] pathForResource:@"MediaKeysResponder" ofType:@"bundle"];
-        NSLog(@"codeBundle: %@", codeBundle);
-        
-        if (win)
-        {
-            mach_error_t err = mach_inject_bundle_pid([codeBundle UTF8String], pid);
-            NSLog(@"inject error: %d", err);
-        }
+        [self injectIntoApp:app];
     }
+}
+
+
+- (NSString *)copyCodeBundleInContainerOfApp:(NSRunningApplication *)app
+{
+    NSFileManager *fm = [NSFileManager defaultManager];
+
+    NSArray *urls = [fm URLsForDirectory:NSLibraryDirectory inDomains:NSUserDomainMask];
+    assert([urls count] >= 1);
+
+    NSString *librariesPath = [[urls objectAtIndex:0] path];
+    assert(librariesPath != nil);
+    
+    NSString *appBundleID = [app bundleIdentifier];
+    assert(appBundleID != nil);
+    
+    NSString *destination = [NSString stringWithFormat:@"%@/Containers/%@/Data/MediaKeysResponder.bundle",
+                                                       librariesPath, appBundleID];
+    // NSLog(@"destination %@", destination);
+    
+    NSString *codeBundle = [[NSBundle mainBundle] pathForResource:@"MediaKeysResponder" ofType:@"bundle"];
+    // NSLog(@"codeBundle: %@", codeBundle);
+    assert(codeBundle != nil);
+    
+    NSError *error;
+    [fm removeItemAtPath:destination error:&error];
+    BOOL copySuccess = [fm copyItemAtPath:codeBundle toPath:destination error:&error];
+    if (! copySuccess)
+    {
+        NSLog(@"Copy failed: %@", error);
+        return nil;
+    }
+    
+    return destination;
+}
+
+
+- (void)injectIntoApp:(NSRunningApplication *)app
+{       
+    SFAuthorization *auth = [[SFAuthorization alloc] init];
+    NSError *error;
+    BOOL win = [auth obtainWithRight:"system.privilege.taskport"
+                               flags:(kAuthorizationFlagExtendRights |
+                                      kAuthorizationFlagInteractionAllowed |
+                                      kAuthorizationFlagPreAuthorize)
+                               error:&error];
+    if (! win)
+    {
+        NSLog(@"getting auth for taskport failed: %@", error);
+        return;
+    }
+    
+    pid_t pid = app.processIdentifier;
+    NSString *codeBundle = [self copyCodeBundleInContainerOfApp:app];
+    
+    mach_error_t err = mach_inject_bundle_pid([codeBundle UTF8String], pid);
+    NSLog(@"inject error: %d", err);
 }
 
 
